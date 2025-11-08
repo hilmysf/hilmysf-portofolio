@@ -14,7 +14,7 @@ onMounted(() => {
     <section id="contact" class="section">
         <h1 ref="titleRef" class="text-3xl font-bold text-center text-white mb-4">Contact <span
                 class="text-primary">Me</span></h1>
-        <form ref="formRef"  class="space-y-4" action="https://api.webform3.com/submit" method="post">
+        <form ref="formRef"  class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="4f50abd5-2792-40c2-ba24-4d16c26d56a0">
             <Input type="text" name="name" placeholder="Your Name" required />
             <Input type="email" name="email" placeholder="Your Email" required />

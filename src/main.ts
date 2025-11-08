@@ -1,5 +1,11 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import './styles/variables.css'
+import './styles/style.css'
+import router from './router'
+import { MotionPlugin } from '@vueuse/motion'
 
-createApp(App).mount('#app')
+createApp(App)
+.use(router)
+.use(MotionPlugin)
+.mount('#app')

@@ -1,0 +1,29 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #FACC15; 
+  --color-primary-hover: #E0D017;
+
+  /* Background & Surface */
+  --color-background: #0E0E0E;
+  --color-background-variant: #111827;
+  --color-surface: #1C1C1C; 
+
+  /* Card Variants */
+  --color-card: #161616; /* Card default */
+  --color-card-alt: #202020; /* Alternate card bg untuk layer atau hover */
+
+  /* Gradient Accent (opsional buat highlight card premium) */
+  --color-card-gradient: linear-gradient(145deg, #1c1c1c, #111827);
+  
+
+  /* Text */
+  --color-text: #FFFFFF;
+  --color-text-muted: #CCCCCC;
+
+  /* Border */
+  --color-border: #2E2E2E;
+
+  /* Accent (optional subtle color depth) */
+  --color-accent-blue: #3B82F6; /* Biru halus untuk skill tag / hover text */
+  --color-accent-purple: #A78BFA; /* Purple luxury vibe */
+}

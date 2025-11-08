@@ -2,10 +2,13 @@
 import { ref, onMounted } from 'vue'
 
 const fireflies = ref([]);
+let isMobile = ref(window.innerWidth <= 640)
 
 onMounted(() => {
+    isMobile = window.innerWidth <= 640
+    const fireflyCount = isMobile ? 10 : 30
     // Generate 30 fireflies dengan posisi & timing random
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < fireflyCount; i++) {
         fireflies.value.push({
             id: i,
             left: Math.random() * 100,
@@ -81,5 +84,11 @@ onMounted(() => {
             0 0 40px #F8E71C,
             0 0 60px rgba(248, 231, 28, 0.5);
     }
+}
+@media (max-width: 640px) {
+  .firefly {
+    filter: none; /* Hapus blur */
+    box-shadow: 0 0 5px #F8E71C; /* Shadow minimal */
+  }
 }
 </style>

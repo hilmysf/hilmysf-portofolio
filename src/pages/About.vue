@@ -1,6 +1,4 @@
 <script setup>
-import Input from '@/components/ui/Input.vue';
-import PrimaryButton from '../components/ui/PrimaryButton.vue';
 import ProfilePhoto from '@/assets/images/Hilmy-Gunung Gede.jpeg'
 import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
 import { ref, onMounted } from 'vue'

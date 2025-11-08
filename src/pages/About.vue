@@ -2,10 +2,16 @@
 import Input from '@/components/ui/Input.vue';
 import PrimaryButton from '../components/ui/PrimaryButton.vue';
 import ProfilePhoto from '@/assets/images/Hilmy-Gunung Gede.jpeg'
+import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
+import { ref, onMounted } from 'vue'
+const aboutRef = ref(null)
+onMounted(() => {
+    useFadeUpMotion(aboutRef, {}, "Experience")
+})
 </script>
 <template>
     <section id="about" class="section">
-        <div class="flex flex-col md:flex-row justify-center max-w-screen-lg my-10">
+        <div ref="aboutRef" class="flex flex-col md:flex-row justify-center max-w-screen-lg my-10">
             <div class="flex-[2] flex-col text-left">
                 <h1 class="md:text-7xl mb-4">About Me</h1>
                 <h3 class="md:text-xl font-normal text-primary mb-5">A fast learner with a curious mind, always eager to

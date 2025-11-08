@@ -1,7 +1,6 @@
 <script setup>
 import { EXPERIENCE_LIST } from '../../../const/ExperienceList';
 import ExperienceCard from '../../ui/ExperienceCard.vue';
-import PrimaryButton from '../../ui/PrimaryButton.vue';
 import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
 import { ref, onMounted } from 'vue'
 import TextButton from '../../ui/TextButton.vue';

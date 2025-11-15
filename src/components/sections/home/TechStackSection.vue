@@ -1,34 +1,17 @@
 <script setup>
-import TechStackCard from '../../ui/TechStackCard.vue'
-
-import icAndroid from '@/assets/ic_android.png'
-import icCompose from '@/assets/ic_compose.png'
-import icFlutter from '@/assets/ic_flutter.png'
-import icJava from '@/assets/ic_java.png'
-import icSwift from '@/assets/ic_swift.png'
-import icVue from '@/assets/ic_vue.png'
-import icJs from '@/assets/ic_javascript.png'
-import icKotlin from '@/assets/ic_kotlin.png'
+import TechStackCard from '../../ui/cards/TechStackCard.vue'
 import { ref, onMounted } from 'vue'
 import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
-import TextButton from '../../ui/TextButton.vue'
+import TextButton from '../../ui/widgets/TextButton.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
+import { TECHNOLOGY_LIST } from '@/const/TechStackList.ts'
 
 function navigateToTechStack() {
     router.push({ name: 'TechStack' })
 }
 
-const technologies = [
-    { title: 'Android', src: icAndroid },
-    { title: 'Jetpack Compose', src: icCompose },
-    { title: 'Kotlin', src: icKotlin },
-    { title: 'Java', src: icJava },
-    { title: 'Flutter', src: icFlutter },
-    { title: 'Swift', src: icSwift },
-    { title: 'Vue.js', src: icVue },
-    { title: 'Javascript', src: icJs },
-]
+const technologies = TECHNOLOGY_LIST
 
 const isMobile = ref(window.innerWidth < 640)
 
@@ -62,6 +45,7 @@ const props = defineProps({
                 </div>
             </div>
         </div>
-        <TextButton v-show="showActionButton" class="mt-4" text="Learn More About My Skills &#8594" @click="navigateToTechStack" />
+        <TextButton v-show="showActionButton" class="mt-4" text="Learn More About My Skills &#8594"
+            @click="navigateToTechStack" />
     </section>
 </template>

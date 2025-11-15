@@ -16,7 +16,7 @@
 }
 
 .section {
-  @apply min-h-screen flex flex-col items-center justify-center text-center p-8;
+  @apply min-h-screen flex flex-col items-center justify-center text-center p-8 md:pt-32;
   background: var(--color-background-variant);
   scroll-margin-top: 80px;
 }
@@ -37,6 +37,14 @@ a:hover {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+p {
+  text-align: start;
+}
+
+hr {
+  @apply h-0 border w-full border-border;
 }
 
 button {

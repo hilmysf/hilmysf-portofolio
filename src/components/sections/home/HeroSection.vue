@@ -1,6 +1,6 @@
 <script setup>
-import PrimaryButton from '../../ui/PrimaryButton.vue';
-import OutlinedButton from '../../ui/OutlinedButton.vue'
+import PrimaryButton from '../../ui/widgets/PrimaryButton.vue';
+import OutlinedButton from '../../ui/widgets/OutlinedButton.vue'
 import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
@@ -8,8 +8,8 @@ import { useRouter } from 'vue-router'
 const heroRef = ref(null)
 const router = useRouter()
 
-function navigateToExperince() {
-    router.push({ name: 'Experience' })
+function navigateToProjects() {
+    router.push({ name: 'Projects' })
 }
 
 function navigateToResume() {
@@ -31,7 +31,7 @@ onMounted(() => {
             <h2 class="italic text-primary text-2xl mt-8">code with purpose, design with
                 empathy</h2>
             <div class="flex flex-col md:flex-row justify-center mt-6 gap-2">
-                <PrimaryButton text="View My Work" @click="navigateToExperince" />
+                <PrimaryButton text="View My Work" @click="navigateToProjects" />
                 <OutlinedButton text="Download CV" @click="navigateToResume" />
             </div>
         </div>

@@ -1,6 +1,6 @@
 <script setup>
-import Input from '@/components/ui/Input.vue';
-import PrimaryButton from '../components/ui/PrimaryButton.vue';
+import Input from '@/components/ui/widgets/Input.vue';
+import PrimaryButton from '../components/ui/widgets/PrimaryButton.vue';
 import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
 import { ref, onMounted } from 'vue'
 const titleRef = ref(null)

@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import PrimaryButton from '../ui/PrimaryButton.vue';
-import ProgressBar from '../ui/ProgressBar.vue';
+import PrimaryButton from '../ui/widgets/PrimaryButton.vue';
+import ProgressBar from '../ui/widgets/ProgressBar.vue';
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)

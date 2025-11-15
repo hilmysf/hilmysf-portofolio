@@ -24,7 +24,7 @@ const isImage = computed(() =>
 </script>
 
 <template>
-    <div>
+    <div class="cursor-pointer">
         <!-- Image -->
         <img v-if="isImage" :src="src" :alt="alt" class="rounded-lg object-contain w-full h-auto" />
 

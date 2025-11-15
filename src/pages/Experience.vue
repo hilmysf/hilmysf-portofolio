@@ -1,7 +1,7 @@
 <script setup>
 import { EXPERIENCE_LIST } from '../const/ExperienceList';
-import ExperienceCard from '../components/ui/ExperienceCard.vue';
-import PrimaryButton from '../components/ui/PrimaryButton.vue';
+import ExperienceCard from '../components/ui/cards/ExperienceCard.vue';
+import PrimaryButton from '../components/ui/widgets/PrimaryButton.vue';
 import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
 import { ref, onMounted } from 'vue'
 import ExperienceSection from '../components/sections/home/ExperienceSection.vue'
@@ -13,5 +13,5 @@ onMounted(() => {
 </script>
 <template>
    
-        <ExperienceSection class="md:!pt-32" />
+        <ExperienceSection/>
 </template>

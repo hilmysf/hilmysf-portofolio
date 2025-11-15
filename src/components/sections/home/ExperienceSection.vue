@@ -1,9 +1,9 @@
 <script setup>
 import { EXPERIENCE_LIST } from '../../../const/ExperienceList';
-import ExperienceCard from '../../ui/ExperienceCard.vue';
+import ExperienceCard from '../../ui/cards/ExperienceCard.vue';
 import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
 import { ref, onMounted } from 'vue'
-import TextButton from '../../ui/TextButton.vue';
+import TextButton from '../../ui/widgets/TextButton.vue';
 import { useRouter } from 'vue-router'
 
 const router = useRouter()

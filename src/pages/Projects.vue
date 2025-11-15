@@ -9,5 +9,5 @@ onMounted(() => {
 </script>
 <template>
 
-    <ProjectSection class="md:!pt-32" />
+    <ProjectSection />
 </template>

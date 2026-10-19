@@ -1,39 +1,5 @@
-<script setup>
-import PrimaryButton from '../../ui/widgets/PrimaryButton.vue';
-import OutlinedButton from '../../ui/widgets/OutlinedButton.vue'
-import { useFadeUpMotion } from '@/composables/useFadeUpMotion'
-import { ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-
-const heroRef = ref(null)
-const router = useRouter()
-
-function navigateToProjects() {
-    router.push({ name: 'Projects' })
-}
-
-function navigateToResume() {
-    router.push({ name: 'Resume' })
-}
-
-
-onMounted(() => {
-    useFadeUpMotion(heroRef, {}, "Hero")
-})
+<script setup lang="ts">
+import photo from '@/assets/images/Hilmy-Gunung Gede.jpeg'
+import cv from '@/assets/files/cv_hilmy.pdf'
 </script>
-<template>
-    <section id="home" class="section">
-        <div ref="heroRef" class="max-w-screen-lg w-full">
-            <h3 class="text-xl font-normal text-text-muted">Turning ideas into seamless digital experiences.</h3>
-            <h1
-                class="mt-10 text-5xl font-extrabold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
-                BUILDING MOBILE IMPACT</h1>
-            <h2 class="italic text-primary text-2xl mt-8">code with purpose, design with
-                empathy</h2>
-            <div class="flex flex-col md:flex-row justify-center mt-6 gap-2">
-                <PrimaryButton text="View My Work" @click="navigateToProjects" />
-                <OutlinedButton text="Download CV" @click="navigateToResume" />
-            </div>
-        </div>
-    </section>
-</template>
+<template><section class="hero container"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> MOBILE DEVELOPER · INDONESIA</p><h1>Thoughtful code.<br>Meaningful<br><em>experiences.</em></h1><p class="hero-description">Hi, I’m Hilmy. I build mobile applications that bring people and technology a little closer.</p><div class="hero-actions"><router-link to="/projects" class="button button-dark">Explore my work <span>↗</span></router-link><a :href="cv" download class="text-link">Download CV <span>↓</span></a></div><div class="hero-note"><span class="tiny-cross">✳</span><p>Currently building at <strong>PT Pupuk Indonesia</strong></p></div></div><div class="hero-visual"><div class="portrait-frame"><img :src="photo" alt="Hilmy hiking on Mount Gede" fetchpriority="high" /><span class="photo-caption">A little curiosity goes a long way.</span></div><div class="portrait-label"><span>THE PERSON BEHIND THE CODE</span><span>01 / HSF</span></div><div class="floating-note"><span>⌘</span><div>Built with purpose.<br><small>Made for people.</small></div></div></div></section><div class="specialty-strip"><div class="container"><span>Android development</span><i>✳</i><span>Flutter & cross-platform</span><i>✳</i><span>Thoughtful interfaces</span><i>✳</i><span>Always learning</span></div></div></template>
